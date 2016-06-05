@@ -1,0 +1,11 @@
+﻿{
+  "supports": {},
+  "dependencies": {
+    "Newtonsoft.Json": "8.0.3",
+    "Portable.BouncyCastle-Signed": "1.7.0.2",
+    "PubnubPCL": "3.7.5"
+  },
+  "frameworks": {
+    ".NETPortable,Version=v4.5,Profile=Profile7": {}
+  }
+}

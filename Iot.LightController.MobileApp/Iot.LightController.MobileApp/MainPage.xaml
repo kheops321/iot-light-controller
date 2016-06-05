@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Iot.LightController.MobileApp.MainPage">
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <StackLayout HorizontalOptions="Center" VerticalOptions="Start" Padding="20">
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="120"></ColumnDefinition>
+        <ColumnDefinition Width="140" ></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start">
+        <Label Text="Light 1" FontSize="18"></Label>
+      </StackLayout>
+      <StackLayout Grid.Row="0" Grid.Column="1">
+        <Button Text="Switch" x:Name="Light1"></Button>
+      </StackLayout>
+      
+      <StackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start">
+        <Label Text="Light 2" FontSize="18"></Label>
+      </StackLayout>
+      <StackLayout Grid.Row="1" Grid.Column="1">
+        <Button Text="Switch" x:Name="Light2"></Button>
+      </StackLayout>
+      
+      <StackLayout Grid.Row="2" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start">
+        <Label Text="Light 3" FontSize="18"></Label>
+      </StackLayout>
+      <StackLayout Grid.Row="2" Grid.Column="1">
+        <Button Text="Switch" x:Name="Light3"></Button>
+      </StackLayout>
+      
+      <StackLayout Grid.Row="3" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start">
+        <Label Text="Light 4" FontSize="18"></Label>
+      </StackLayout>
+      <StackLayout Grid.Row="3" Grid.Column="1">
+        <Button Text="Switch" x:Name="Light4"></Button>
+      </StackLayout>
+    </Grid>
+  </StackLayout>
+</ContentPage>
