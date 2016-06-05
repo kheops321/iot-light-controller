@@ -13,10 +13,10 @@ namespace Iot.LightController.Raspberry.Core
         {
             _lights = new List<KeyValuePair<int, GpioPin>>
             {
-                InitializePin(6), // Gpio numéro 6 pour controller la première lampe
-                InitializePin(13), // Gpio numéro 13 pour controller la deuxième lampe
-                InitializePin(19), // Gpio numéro 19 pour controller la troisième lampe
-                InitializePin(26) // Gpio numéro 26 pour controller la quatrième lampe
+                InitializePin(12), // Gpio numéro 12 pour controller la première lampe
+                InitializePin(16), // Gpio numéro 16 pour controller la deuxième lampe
+                InitializePin(20), // Gpio numéro 20 pour controller la troisième lampe
+                InitializePin(21) // Gpio numéro 21 pour controller la quatrième lampe
             };
         }
 
