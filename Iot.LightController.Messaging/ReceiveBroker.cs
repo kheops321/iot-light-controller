@@ -16,24 +16,24 @@ namespace Iot.LightController.Messaging
 
             MessageQueue.Subscribe<string>(
                 PubNubParams.PubNubChannel,
-                PubNubSubscribeSuccess,
-                DisplayConnectionStatus,
-                DisplayReceiveError);
+                ReceivedMessageCallback,
+                ConnectionEstablishedCallback,
+                ErrorHandeledCallback);
         }
 
-        private void PubNubSubscribeSuccess(string receivedMessage)
+        private void ReceivedMessageCallback(string receivedMessage)
         {
             var message = JsonConvert.DeserializeObject<string[]>(receivedMessage)[0];
             Debug.WriteLine("RECEIVED MESSAGE: " + message);
             OnReceivedMessage?.Invoke(message);
         }
 
-        private void DisplayConnectionStatus(string connectionStatusMessage)
+        private void ConnectionEstablishedCallback(string connectionStatusMessage)
         {
             Debug.WriteLine("CONNECTION: " + connectionStatusMessage);
         }
 
-        private void DisplayReceiveError(PubnubClientError error)
+        private void ErrorHandeledCallback(PubnubClientError error)
         {
             Debug.WriteLine("UNEXPECTED ERRER: " + error);
         }

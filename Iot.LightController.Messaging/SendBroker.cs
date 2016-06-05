@@ -10,8 +10,8 @@ namespace Iot.LightController.Messaging
             MessageQueue.Publish(
                 PubNubParams.PubNubChannel,
                 message,
-                GetResult,
-                WhenErrorHandeled);
+                PublishCallback,
+                UnexpectedPublishErrorCallback);
         }
 
         public override void Initialize()
@@ -19,15 +19,15 @@ namespace Iot.LightController.Messaging
             MessageQueue.Publish(
                 PubNubParams.PubNubInitializationChannel,
                 "INIT",
-                GetResult,
-                WhenErrorHandeled);
+                PublishCallback,
+                UnexpectedPublishErrorCallback);
 
         }
 
-        private void GetResult(object result)
+        private void PublishCallback(object result)
         { }
 
-        private void WhenErrorHandeled(PubnubClientError error)
+        private void UnexpectedPublishErrorCallback(PubnubClientError error)
         {
             throw new Exception(error.Message);
         }

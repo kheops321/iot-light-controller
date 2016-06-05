@@ -10,12 +10,12 @@ namespace Iot.LightController.Messaging
         protected MessageBroker()
         {
 
-            MessageQueue = new Pubnub(
-            PubNubParams.PubNubPublisherKey,
-            PubNubParams.PubNubSuscriberKey,
-            PubNubParams.PubNubSecret,
-            PubNubParams.PubNubCipherKey,
-            true);
+            var messageQueue = new Pubnub(
+                PubNubParams.PubNubPublisherKey,
+                PubNubParams.PubNubSuscriberKey,
+                PubNubParams.PubNubSecret,
+                PubNubParams.PubNubCipherKey,
+                true);
         }
         
         public virtual void Initialize()
